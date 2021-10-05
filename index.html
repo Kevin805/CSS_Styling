@@ -11,11 +11,29 @@
            background-color: blanchedalmond;
            height: 50%;
            width: 50%;
-           transition: transform 1s;
+           transition: transform 1s ease-in;
        }
        .parent:hover .child {
-           background-color: blue;
            transform: translateX(100%);
+           animation: circle 1s ease-in forwards;
+       }
+
+       @keyframes circle {
+           0% {
+               transform: translate(0);
+           }
+
+           33% {
+               transform: translateY(100%)
+           }
+
+           66% {
+               transform: translateX(100%) translateY(100%);
+           }
+
+           100% {
+               transform: translate(100%)
+           }
        }
    </style>
 </head>
